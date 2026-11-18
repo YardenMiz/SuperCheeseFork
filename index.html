@@ -39,7 +39,6 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.3.0/firebase-ui-auth-rtl.css">
     <link rel="stylesheet" href="modules/bootstrap-rtl/css/bootstrap.min.css">
     <link rel="stylesheet" href="modules/bootstrap4-dialog/css/bootstrap-dialog.min.css">
     <link rel="stylesheet" href="modules/OverlayScrollbars/css/OverlayScrollbars.min.css">
@@ -339,14 +338,9 @@
         </p>
     </footer>
 </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115440973-1"></script>
+<!-- Analytics are disabled in this fork, gtag() is kept as a no-op since the code calls it. -->
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115440973-1');
+    function gtag() {}
 </script>
 <script src="modules/fullcalendar/lib/jquery.min.js"></script>
 <script src="modules/fullcalendar/lib/jquery-ui.min.js"></script>
@@ -365,11 +359,8 @@
 <script src="modules/reparse.js"></script>
 <script src="modules/boolean-expression.js"></script>
 <script type="module" src="modules/dark-mode-toggle-0.14.6.min.mjs"></script>
-<script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-storage-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/ui/3.3.0/firebase-ui-auth__iw.js"></script>
+<!-- Sign-in (Firebase) is disabled in this fork: it used the original CheeseFork's Firebase project.
+     Without it, the schedule is saved in the browser (localStorage). -->
 <script>
     var availableSemesters = {
         "201701": {"start": "2017-10-22", "end": "2018-01-25"},

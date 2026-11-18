@@ -38,7 +38,14 @@
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        viewingSharedSchedule = scheduleSharingUserId ? true : false;
+        // Viewing a shared schedule requires Firebase, which may be disabled.
+        viewingSharedSchedule = scheduleSharingUserId && typeof firebase !== 'undefined' ? true : false;
+
+        if (typeof firebase === 'undefined') {
+            // No sign-in available, so no sharing either.
+            $('#top-navbar-share').addClass('d-none');
+            $('#top-navbar-login, #top-navbar-share').removeAttr('data-intro');
+        }
 
         navbarInit();
 

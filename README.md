@@ -37,9 +37,18 @@ selected courses. Each click gives a different schedule, and it:
 
 The result is saved like any other change, and "בטל שינויים" undoes it.
 
-All the new data (block colors, groups and course links) is saved the same way the
-original app saves your schedule: in the browser (localStorage), or in your account
-when you are signed in.
+All the new data (block colors, groups and course links) is saved together with the
+rest of your schedule.
+
+### Differences from the original CheeseFork
+- **No sign-in or schedule sharing.** The original app's sign-in uses its own
+  Firebase project, so it is turned off here. Your schedule is saved in your browser
+  (localStorage), which means it stays on the device and browser you used.
+  iCalendar export still works and downloads the `.ics` file directly.
+- **No analytics.** The original Google Analytics tracking is removed.
+
+Course data and grade histograms are still loaded from the original CheeseFork
+servers.
 
 ## Running locally
 
